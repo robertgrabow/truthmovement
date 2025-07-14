@@ -74,8 +74,51 @@
         }
         .form-section {
             margin-top: 40px;
-        }
-    </style>
+        }@media (max-width: 768px) {
+    header, nav, .container, .hero, footer {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 250px;
+        margin: 10px auto;
+    }
+
+    textarea, input[type="text"] {
+        font-size: 1em;
+    }
+
+    .program {
+        padding: 15px;
+    }
+}
+            </style>
 </head>
 <body>
     <header>
