@@ -148,6 +148,25 @@
   firebase.initializeApp(firebaseConfig);
   const db = firebase.firestore();
 </script>
+<script>
+  document.querySelector("form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    const prayer = document.getElementById("prayer").value;
+
+    if (prayer.trim()) {
+      try {
+        await db.collection("prayers").add({
+          text: prayer,
+          date: new Date().toLocaleString()
+        });
+        alert("Prayer request sent. 🙏");
+        document.getElementById("prayer").value = "";
+      } catch (error) {
+        alert("Error sending prayer request: " + error.message);
+      }
+    }
+  });
+</script>
 
   <header>
     <h1>The Truth Movement</h1>
