@@ -130,6 +130,27 @@
   </style>
 </head>
 <body>
+  <!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore-compat.js"></script>
+
+<script>
+  // Your Firebase config
+  const firebaseConfig = {
+    apiKey: "AIzaSyAT5BVjkMM_zN6KjzlpsVWbTNLSCti5gB8",
+    authDomain: "the-truth-movement.firebaseapp.com",
+    projectId: "the-truth-movement",
+    storageBucket: "the-truth-movement.firebasestorage.app",
+    messagingSenderId: "946002506084",
+    appId: "1:946002506084:web:cb0b1a44bc8ecfde2a4a71",
+    measurementId: "G-XG18FMSRD2"
+  };
+
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore();
+</script>
+
   <header>
     <h1>The Truth Movement</h1>
     <nav>
