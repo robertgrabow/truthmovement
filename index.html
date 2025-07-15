@@ -1,4 +1,4 @@
-
+<html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -130,44 +130,6 @@
   </style>
 </head>
 <body>
-<script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore-compat.js"></script>
-
-<script>
-  const firebaseConfig = {
-    apiKey: "AIzaSyAT5BVjkMM_zN6KjzlpsVWbTNLSCti5gB8",
-    authDomain: "the-truth-movement.firebaseapp.com",
-    projectId: "the-truth-movement",
-    storageBucket: "the-truth-movement.firebasestorage.app",
-    messagingSenderId: "946002506084",
-    appId: "1:946002506084:web:cb0b1a44bc8ecfde2a4a71",
-    measurementId: "G-XG18FMSRD2"
-  };
-
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const db = firebase.firestore();
-</script>
-<script>
-  document.querySelector("form").addEventListener("submit", async function (e) {
-    e.preventDefault();
-    const prayer = document.getElementById("prayer").value;
-
-    if (prayer.trim()) {
-      try {
-        await db.collection("prayers").add({
-          text: prayer,
-          date: new Date().toLocaleString()
-        });
-        alert("Prayer request sent. 🙏");
-        document.getElementById("prayer").value = "";
-      } catch (error) {
-        alert("Error sending prayer request: " + error.message);
-      }
-    }
-  });
-</script>
-
   <header>
     <h1>The Truth Movement</h1>
     <nav>
@@ -187,36 +149,31 @@
   <div class="container">
     <section id="about">
       <h2>Who We Are</h2>
-      <p>The Truth Movement exists to show that no matter your past, your pain, or your mistakes, you can rise up, speak your truth, and change your life. We believe God is everything — in us, around us, and working through us — and with faith, hard work, and honesty, transformation is possible for anyone. We stand for second chances, for speaking life into the broken, for guiding young people away from the streets and toward their true purpose. Through education, creativity, community, and raw truth, we help people rewrite their story — because your story ain’t over, it’s just getting started.</p>
-      <p>This movement is not about judgment. It's about love, respect, and real accountability. We lift each other up, we own our past, and we push each other to become something greater — for ourselves, our families, and our communities. Our truth. Our time. Our movement.</p>
+      <p>The Truth Movement exists to show that no matter your past, your pain, or your mistakes, you can rise up, speak your truth, and change your life. We believe God is everything — in us, around us, and working through us — and with faith, hard work, and honesty, transformation is possible for anyone.</p>
+      <p>This movement is not about judgment. It's about love, respect, and real accountability. We lift each other up, own our past, and push each other to become something greater — for ourselves, our families, and our communities.</p>
     </section>
 
     <section id="programs" class="programs">
       <h2>Our Programs</h2>
-
       <div class="program">
         <h3>Redemption Academy</h3>
-        <p>For people coming home from prison or caught in the street cycle — mentorship, education, job training, and spiritual growth. We help build practical life skills, emotional healing, and strong faith-based foundations to rebuild lives and break generational cycles. It's a real shot at something better.</p>
+        <p>Mentorship, education, job training, and spiritual growth for those reentering society or stuck in the street cycle.</p>
       </div>
-
       <div class="program">
         <h3>Young Kings & Queens</h3>
-        <p>Empowering youth through sports, music, creative writing, and entrepreneurship. We teach discipline, confidence, and purpose — guiding the next generation to rise with pride, responsibility, and faith-driven goals.</p>
+        <p>Youth programs focused on sports, music, creative writing, entrepreneurship, and leadership.</p>
       </div>
-
       <div class="program">
         <h3>Sober & Free Network</h3>
-        <p>We partner with AA, NA, Celebrate Recovery, Oxford House, Transitions, Grateful Life Center, and more to create a strong support system for sobriety. Whether it's detox, meetings, or sober living — you're never alone on this journey.</p>
+        <p>Support through detox, sober living, meetings, and spiritual community.</p>
       </div>
-
       <div class="program">
         <h3>Bars & Books</h3>
-        <p>Creative programs mixing music, poetry, and education. Write your truth, rap your truth, read your truth — heal through expression.</p>
+        <p>Writing, spoken word, music and reading for healing through expression.</p>
       </div>
-
       <div class="program">
         <h3>Truth Scholarship Fund</h3>
-        <p>Helping folks chase education, no matter their age. Whether it's GEDs, college, or vocational programs — we help you take the next step.</p>
+        <p>Funding for GEDs, college, trade school, or skill-building — no age limit.</p>
       </div>
     </section>
 
@@ -232,7 +189,7 @@
 
     <section id="involved">
       <h2>Get Involved</h2>
-      <p>Want to be part of the movement? This is more than a vibe — it’s a calling. You can mentor youth, volunteer your time, offer skills, fund programs, or spread awareness. This ain’t a one-man mission — it’s a family of faith and fighters building something real together.</p>
+      <p>Join us as a mentor, volunteer, partner, or donor. It’s not just a mission — it’s a movement.</p>
       <div class="cta-buttons">
         <a href="mailto:robertgrabow1@gmail.com?subject=Mentorship%20Interest" class="btn">Mentor</a>
         <a href="mailto:robertgrabow1@gmail.com?subject=Volunteer%20Signup" class="btn">Volunteer</a>
@@ -243,7 +200,7 @@
 
     <section class="form-section">
       <h2>Submit a Prayer Request</h2>
-      <form action="mailto:robertgrabow1@gmail.com" method="POST" enctype="text/plain">
+      <form id="prayerForm">
         <label for="prayer">Your Prayer:</label>
         <textarea id="prayer" name="prayer" rows="4" placeholder="Write your prayer here..."></textarea>
         <input type="submit" value="Send Request" class="btn" />
@@ -261,5 +218,40 @@
   <footer>
     <p>&copy; 2025 The Truth Movement. All Rights Reserved.</p>
   </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore-compat.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAT5BVjkMM_zN6KjzlpsVWbTNLSCti5gB8",
+      authDomain: "the-truth-movement.firebaseapp.com",
+      projectId: "the-truth-movement",
+      storageBucket: "the-truth-movement.firebasestorage.app",
+      messagingSenderId: "946002506084",
+      appId: "1:946002506084:web:cb0b1a44bc8ecfde2a4a71",
+      measurementId: "G-XG18FMSRD2"
+    };
+
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.firestore();
+
+    document.getElementById("prayerForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const prayer = document.getElementById("prayer").value;
+      if (prayer.trim()) {
+        try {
+          await db.collection("prayers").add({
+            text: prayer,
+            date: new Date().toLocaleString()
+          });
+          alert("Prayer request sent 🙏");
+          document.getElementById("prayer").value = "";
+        } catch (err) {
+          alert("Error: " + err.message);
+        }
+      }
+    });
+  </script>
 </body>
 </html>
