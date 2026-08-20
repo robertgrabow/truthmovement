@@ -1,257 +1,34 @@
-<html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Truth Movement</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="The Truth Movement is a Northern Kentucky faith-and-recovery initiative helping people rebuild through truth, accountability, connection, and practical next steps.">
+  <meta name="theme-color" content="#0e1b17">
+  <title>The Truth Movement | Your Story Isn't Over</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      background: #222;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-    }
-
-    .hero {
-      background: url('https://via.placeholder.com/1500x500') no-repeat center center/cover;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 3em;
-      margin-bottom: 20px;
-    }
-
-    .container {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .programs, .beliefs, .contact {
-      margin-top: 40px;
-    }
-
-    .program {
-      background: #222;
-      padding: 20px;
-      margin: 15px 0;
-      border-radius: 8px;
-    }
-
-    footer {
-      background: #222;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: #ff4500;
-      color: #fff;
-      padding: 10px 20px;
-      margin: 10px 5px 0 5px;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    .cta-buttons {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    textarea, input[type="text"] {
-      width: 100%;
-      padding: 10px;
-      border-radius: 5px;
-      border: none;
-      margin-top: 10px;
-      font-size: 1em;
-    }
-
-    .form-section {
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      header, nav, .container, .hero, footer {
-        padding: 10px;
-        text-align: center;
-      }
-
-      .hero {
-        padding: 60px 10px;
-      }
-
-      .hero h1 {
-        font-size: 2em;
-      }
-
-      nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-      }
-
-      nav a {
-        margin: 5px 10px;
-        display: inline-block;
-      }
-
-      .cta-buttons {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-      }
-
-      .btn {
-        width: 100%;
-        max-width: 250px;
-        margin: 10px auto;
-      }
-    }
+    :root{--ink:#10201b;--forest:#0e1b17;--cream:#f4efe3;--paper:#fffdf7;--gold:#d9a441;--rust:#c9613d;--muted:#65706b;--line:rgba(16,32,27,.14);--radius:24px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--cream);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}a{color:inherit}.wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}.eyebrow{margin:0 0 12px;color:var(--rust);font-size:.78rem;font-weight:850;letter-spacing:.16em;text-transform:uppercase}h1,h2,h3{margin-top:0;line-height:1.08;letter-spacing:-.035em}h1{max-width:820px;margin-bottom:24px;font-family:Georgia,serif;font-size:clamp(3.15rem,8vw,6.7rem)}h2{font-family:Georgia,serif;font-size:clamp(2.25rem,5vw,4rem)}h3{font-size:1.22rem}p{margin:0 0 18px}.skip-link{position:absolute;left:-999px;top:8px;z-index:100;padding:10px 14px;background:#fff;color:#000}.skip-link:focus{left:8px}
+    header{position:absolute;z-index:10;width:100%;color:#fff}nav{min-height:88px;display:flex;align-items:center;justify-content:space-between;gap:30px;border-bottom:1px solid rgba(255,255,255,.18)}.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;font-weight:850;letter-spacing:-.02em}.brand-mark{width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.55);border-radius:50%;color:var(--gold);font-family:Georgia,serif;font-size:1.35rem}.nav-links{display:flex;align-items:center;gap:28px}.nav-links a{color:rgba(255,255,255,.86);font-size:.92rem;font-weight:700;text-decoration:none}.nav-links a:hover,.nav-links a:focus{color:#fff}
+    .hero{min-height:780px;display:grid;align-items:end;color:#fff;background:radial-gradient(circle at 82% 30%,rgba(217,164,65,.26),transparent 26%),linear-gradient(115deg,rgba(7,20,16,.98) 5%,rgba(14,35,28,.92) 58%,rgba(26,62,49,.82)),repeating-linear-gradient(135deg,transparent 0 18px,rgba(255,255,255,.025) 18px 19px);overflow:hidden}.hero-inner{position:relative;padding:210px 0 96px}.hero-inner:after{content:"TRUTH";position:absolute;right:-35px;bottom:-98px;color:rgba(255,255,255,.035);font-size:clamp(9rem,24vw,19rem);font-weight:950;letter-spacing:-.08em;line-height:1;pointer-events:none}.hero p:not(.eyebrow){max-width:660px;color:rgba(255,255,255,.78);font-size:clamp(1.05rem,2vw,1.28rem)}.actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}.button{display:inline-flex;min-height:50px;align-items:center;justify-content:center;padding:13px 22px;border:1px solid transparent;border-radius:999px;background:var(--gold);color:var(--forest);font-weight:850;text-decoration:none;transition:transform .18s ease,background .18s ease}.button:hover,.button:focus{transform:translateY(-2px);background:#e7b454}.button.secondary{border-color:rgba(255,255,255,.45);background:transparent;color:#fff}
+    section{padding:104px 0}.intro,.vision{background:var(--paper)}.split{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(45px,9vw,120px);align-items:start}.lead{font-family:Georgia,serif;font-size:clamp(1.45rem,3vw,2.1rem);line-height:1.38}.quote-card{margin-top:40px;padding:28px;border-left:4px solid var(--gold);background:#f7f1e4}.quote-card p{margin:0;font-weight:750}.section-head{max-width:720px;margin-bottom:48px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{min-height:290px;padding:30px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(255,253,247,.75);box-shadow:0 12px 35px rgba(16,32,27,.05)}.number{display:inline-block;margin-bottom:55px;color:var(--rust);font-family:Georgia,serif;font-size:1.15rem;font-weight:800}.card p,.vision-card p{color:var(--muted)}
+    .path{color:#fff;background:var(--forest)}.path .eyebrow{color:var(--gold)}.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:50px;border-top:1px solid rgba(255,255,255,.18)}.step{position:relative;padding:34px 26px 0 0}.step:before{content:"";position:absolute;top:-6px;left:0;width:11px;height:11px;border-radius:50%;background:var(--gold)}.step p{color:rgba(255,255,255,.68)}.vision-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.vision-card{padding:36px;border:1px solid var(--line);border-radius:var(--radius)}.vision-card strong{display:block;margin-bottom:10px;color:var(--rust);font-size:.78rem;letter-spacing:.13em;text-transform:uppercase}.status{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:7px 12px;border-radius:999px;background:#e8eee8;color:#365445;font-size:.78rem;font-weight:800}.status:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+    .contact{background:var(--rust);color:#fff}.contact-box{display:grid;grid-template-columns:1.4fr .6fr;gap:50px;align-items:end}.contact h2{max-width:700px;margin-bottom:22px}.contact p{max-width:620px;color:rgba(255,255,255,.82)}.contact .button{background:#fff;color:var(--rust)}.contact-note{margin-top:28px;font-size:.82rem;color:rgba(255,255,255,.68)!important}footer{padding:32px 0;color:rgba(255,255,255,.66);background:#08110e;font-size:.82rem}footer .wrap{display:flex;justify-content:space-between;gap:20px}
+    @media(max-width:800px){.wrap{width:min(100% - 28px,1120px)}nav{min-height:72px}.brand span:last-child{max-width:120px;line-height:1.1}.nav-links a:not(:last-child){display:none}.hero{min-height:700px}.hero-inner{padding:160px 0 70px}section{padding:74px 0}.split,.contact-box{grid-template-columns:1fr;gap:30px}.cards,.vision-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr;gap:24px}.number{margin-bottom:28px}}@media(max-width:500px){h1{font-size:3.05rem}.steps{grid-template-columns:1fr}footer .wrap{flex-direction:column}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
   </style>
 </head>
 <body>
-  <header>
-    <h1>The Truth Movement</h1>
-    <nav>
-      <a href="#about">About Us</a>
-      <a href="#programs">Programs</a>
-      <a href="#involved">Get Involved</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section class="hero">
-    <h1>From the Struggle to Success — Your Story Ain't Over.</h1>
-    <a href="#involved" class="btn">Join the Movement</a>
-    <a href="https://cash.app/$freshforthetruth" class="btn" target="_blank">Donate</a>
-  </section>
-
-  <div class="container">
-    <section id="about">
-      <h2>Who We Are</h2>
-      <p>The Truth Movement exists to show that no matter your past, your pain, or your mistakes, you can rise up, speak your truth, and change your life. We believe God is everything — in us, around us, and working through us — and with faith, hard work, and honesty, transformation is possible for anyone.</p>
-      <p>This movement is not about judgment. It's about love, respect, and real accountability. We lift each other up, own our past, and push each other to become something greater — for ourselves, our families, and our communities.</p>
-    </section>
-
-    <section id="programs" class="programs">
-      <h2>Our Programs</h2>
-      <div class="program">
-        <h3>Redemption Academy</h3>
-        <p>Mentorship, education, job training, and spiritual growth for those reentering society or stuck in the street cycle.</p>
-      </div>
-      <div class="program">
-        <h3>Young Kings & Queens</h3>
-        <p>Youth programs focused on sports, music, creative writing, entrepreneurship, and leadership.</p>
-      </div>
-      <div class="program">
-        <h3>Sober & Free Network</h3>
-        <p>Support through detox, sober living, meetings, and spiritual community.</p>
-      </div>
-      <div class="program">
-        <h3>Bars & Books</h3>
-        <p>Writing, spoken word, music and reading for healing through expression.</p>
-      </div>
-      <div class="program">
-        <h3>Truth Scholarship Fund</h3>
-        <p>Funding for GEDs, college, trade school, or skill-building — no age limit.</p>
-      </div>
-    </section>
-
-    <section class="beliefs">
-      <h2>What We Believe</h2>
-      <ul>
-        <li>✔ Everyone can change — no matter your past.</li>
-        <li>✔ God is everything — many names, same source.</li>
-        <li>✔ Hard work beats talent when talent won’t work.</li>
-        <li>✔ Lift as we climb — bring others with us.</li>
-      </ul>
-    </section>
-
-    <section id="involved">
-      <h2>Get Involved</h2>
-      <p>Join us as a mentor, volunteer, partner, or donor. It’s not just a mission — it’s a movement.</p>
-      <div class="cta-buttons">
-        <a href="mailto:robertgrabow1@gmail.com?subject=Mentorship%20Interest" class="btn">Mentor</a>
-        <a href="mailto:robertgrabow1@gmail.com?subject=Volunteer%20Signup" class="btn">Volunteer</a>
-        <a href="mailto:robertgrabow1@gmail.com?subject=Partnership%20Inquiry" class="btn">Partner</a>
-        <a href="https://cash.app/$freshforthetruth" class="btn" target="_blank">Donate</a>
-      </div>
-    </section>
-
-    <section class="form-section">
-      <h2>Submit a Prayer Request</h2>
-      <form id="prayerForm">
-        <label for="prayer">Your Prayer:</label>
-        <textarea id="prayer" name="prayer" rows="4" placeholder="Write your prayer here..."></textarea>
-        <input type="submit" value="Send Request" class="btn" />
-      </form>
-    </section>
-
-    <section id="contact" class="contact">
-      <h2>Contact Us</h2>
-      <p>Email: RobertGrabow1@gmail.com</p>
-      <p>Phone: 859-999-9425</p>
-      <p>Location: Northern Kentucky, USA</p>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 The Truth Movement. All Rights Reserved.</p>
-  </footer>
-
-  <!-- Firebase SDK -->
-  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.3.1/firebase-firestore-compat.js"></script>
-  <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyAT5BVjkMM_zN6KjzlpsVWbTNLSCti5gB8",
-      authDomain: "the-truth-movement.firebaseapp.com",
-      projectId: "the-truth-movement",
-      storageBucket: "the-truth-movement.firebasestorage.app",
-      messagingSenderId: "946002506084",
-      appId: "1:946002506084:web:cb0b1a44bc8ecfde2a4a71",
-      measurementId: "G-XG18FMSRD2"
-    };
-
-    firebase.initializeApp(firebaseConfig);
-    const db = firebase.firestore();
-
-    document.getElementById("prayerForm").addEventListener("submit", async function (e) {
-      e.preventDefault();
-      const prayer = document.getElementById("prayer").value;
-      if (prayer.trim()) {
-        try {
-          await db.collection("prayers").add({
-            text: prayer,
-            date: new Date().toLocaleString()
-          });
-          alert("Prayer request sent 🙏");
-          document.getElementById("prayer").value = "";
-        } catch (err) {
-          alert("Error: " + err.message);
-        }
-      }
-    });
-  </script>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header><nav class="wrap" aria-label="Main navigation"><a class="brand" href="#top" aria-label="The Truth Movement home"><span class="brand-mark">T</span><span>The Truth Movement</span></a><div class="nav-links"><a href="#mission">Mission</a><a href="#focus">Our focus</a><a href="#vision">Vision</a><a href="#connect">Connect</a></div></nav></header>
+  <main id="main">
+    <section class="hero" id="top"><div class="wrap hero-inner"><p class="eyebrow">Faith · Recovery · Second Chances</p><h1>Your story isn't over.</h1><p>The Truth Movement is a Northern Kentucky initiative built on a simple conviction: the past can explain where we have been, but it does not get to decide where we are going.</p><div class="actions"><a class="button" href="#connect">Join the movement</a><a class="button secondary" href="#mission">Read our mission</a></div></div></section>
+    <section class="intro" id="mission"><div class="wrap split"><div><p class="eyebrow">Our mission</p><h2>Truth that leads to action.</h2></div><div><p class="lead">We help people affected by addiction, incarceration, trauma, and broken systems move toward recovery, purpose, and stronger families.</p><p>Our foundation is faith, honest accountability, lived experience, and practical support. We believe change becomes possible when people are seen without judgment, challenged with love, and connected to the next right resource.</p><p>The work begins locally—with real conversations, trustworthy relationships, recovery-centered encouragement, and service to people who are ready for a different life.</p><div class="quote-card"><p>“We do not hide the struggle. We turn it into a bridge for the person coming behind us.”</p></div></div></div></section>
+    <section class="focus" id="focus"><div class="wrap"><div class="section-head"><p class="eyebrow">What guides the work</p><h2>Built for real life.</h2><p>Not promises from a podium—practical principles people can carry into the next hour, the next decision, and the next chapter.</p></div><div class="cards"><article class="card"><span class="number">01</span><h3>Recovery and accountability</h3><p>Encouragement rooted in honesty, responsibility, sober community, and the daily work of becoming dependable again.</p></article><article class="card"><span class="number">02</span><h3>Family restoration</h3><p>Support for parents and families working to rebuild trust, strengthen relationships, and create safer futures for their children.</p></article><article class="card"><span class="number">03</span><h3>Purpose after hardship</h3><p>Hope paired with practical direction—education, employment, service, storytelling, and connection to community resources.</p></article></div></div></section>
+    <section class="path"><div class="wrap"><p class="eyebrow">How change moves</p><h2>One honest step at a time.</h2><div class="steps"><div class="step"><h3>Tell the truth</h3><p>Name what is real without shame or excuses.</p></div><div class="step"><h3>Accept support</h3><p>Stop carrying alone what was never meant to be carried alone.</p></div><div class="step"><h3>Do the work</h3><p>Build recovery, responsibility, and consistency through action.</p></div><div class="step"><h3>Lift others</h3><p>Turn lived experience into service and a path forward for someone else.</p></div></div></div></section>
+    <section class="vision" id="vision"><div class="wrap split"><div><p class="eyebrow">The vision</p><h2>Growing carefully. Serving honestly.</h2><p>The Truth Movement is building its foundation before making big claims. These are the areas shaping the work ahead.</p></div><div class="vision-grid"><article class="vision-card"><strong>Stories & devotionals</strong><h3>Words that meet people where they are</h3><p>Recovery reflections, faith-centered encouragement, and honest stories about rebuilding a life.</p><span class="status">In development</span></article><article class="vision-card"><strong>Community outreach</strong><h3>Local connection that opens doors</h3><p>Resource sharing, speaking, service projects, and partnerships with trusted recovery and family-support organizations.</p><span class="status">Building relationships</span></article><article class="vision-card"><strong>Peer encouragement</strong><h3>Lived experience used responsibly</h3><p>Practical encouragement and warm connections to qualified providers, recovery communities, and essential services.</p><span class="status">Community focused</span></article><article class="vision-card"><strong>Future programs</strong><h3>A long-term home for second chances</h3><p>Mentorship, education, creative expression, and recovery-focused initiatives developed with the right partners and safeguards.</p><span class="status">Future vision</span></article></div></div></section>
+    <section class="contact" id="connect"><div class="wrap contact-box"><div><p class="eyebrow" style="color:#ffe0a3">Connect with us</p><h2>Ready to help build something honest?</h2><p>We want to hear from people interested in sharing resources, volunteering, collaborating, or supporting recovery and family restoration in Northern Kentucky.</p><p class="contact-note">The Truth Movement is a community initiative, not an emergency, medical, legal, or clinical service. If someone is in immediate danger, call 911.</p></div><div class="actions"><a class="button" href="mailto:robertgrabow1@gmail.com?subject=The%20Truth%20Movement%20Connection">Email The Truth Movement</a></div></div></section>
+  </main>
+  <footer><div class="wrap"><span>© <span id="year"></span> The Truth Movement</span><span>Northern Kentucky · Faith, recovery, and second chances</span></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 </body>
 </html>
